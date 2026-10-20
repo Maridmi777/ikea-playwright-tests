@@ -17,6 +17,6 @@
   "homepage": "https://github.com/Maridmi777/ikea-playwright-tests#readme",
   "devDependencies": {
     "@playwright/test": "^1.63.0",
-    "@types/node": "^26.6.2"
+    "@types/node": "^26.6.5"
   }
 }
