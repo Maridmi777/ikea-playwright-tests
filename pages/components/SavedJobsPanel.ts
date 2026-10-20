@@ -7,6 +7,6 @@ export class SavedJobsPanel {
   constructor(page: Page) {
     this.page = page;
 
-    this.savedJobLinks = page.getByRole('link');
+     this.savedJobLinks = page.getByRole('link', { name: /View all/ });
   }
 }
