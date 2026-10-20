@@ -11,11 +11,12 @@ export class JobDetailsPage {
   constructor(page: Page) {
     this.page = page;
 
-    this.jobTitle = page.getByRole('heading');
+     this.jobTitle = page.getByRole('heading', { level: 1 });
 
-    this.saveButton = page.getByRole('button', {
-      name: /Save|Saved/,
-    });
+    this.saveButton = page
+      .locator('section')
+      .filter({ has: page.getByRole('heading', { level: 1 }) })
+      .getByLabel('Save Job');
 
     this.savedJobsButton = page.getByRole('button', {
       name: /Saved jobs/,
